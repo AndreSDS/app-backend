@@ -38,8 +38,8 @@ routes.post('/incidents', celebrate({
     }).unknown(),
     [Segments.BODY] : Joi.object().keys({
         title: Joi.string().required(),
-        description: Joi.string().required().email(),
-        vlaue: Joi.number().required()
+        description: Joi.string().required(),
+        value: Joi.number().required()
     })
 }), IncidentsController.create);
 
